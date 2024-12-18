@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FeedBack App</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body>
+    <main
+      class="bg-gray-900 h-auto md:h-screen w-screen text-white flex flex-col md:flex-row"
+    >
+      <div class="w-full flex flex-col items-center justify-center">
+        <form
+          id="feedback_form"
+          action=""
+          class="bg-gray-700 rounded-lg flex flex-col w-full lg:w-2/3"
+        >
+          <div class="image_container flex justify-center mt-5">
+            <img
+              class="w-20 justify-center"
+              src="images/feedback.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+
+          <h1
+            id="form_heading"
+            class="text-center text-2xl font-bold mb-5 mt-3"
+          >
+            Time Tracker
+          </h1>
+          <!-- name field -->
+          <div class="form_input">
+            <label for="name" class="text-white mb-4 mr-7 ml-4 p-3"
+              >Task :
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-2/3 px-2 py-2 mt-1 mb-5 text-gray-300 bg-gray-600 border-none rounded-lg"
+              placeholder="Study/Play/Tp..."
+            />
+          </div>
+          <!-- email field -->
+          <div class="form_input">
+            <label for="email" class="text-white mb-4 mr-6 ml-4 pl-10"
+              >From :</label
+            >
+            <input
+              type="time"
+              id="t1"
+              name="t1"
+              class="w-2/3 px-2 py-2 mt-1 mb-5 text-gray-300 bg-gray-600 border-none rounded-lg"
+              step="300"
+            />
+          </div>
+
+          <div class="form_input">
+            <label for="time2" class="text-white mb-4 mr-7 ml-4">Till :</label>
+            <input
+              type="time"
+              id="time2"
+              name="time2"
+              class="w-2/3 px-2 py-2 mt-1 mb-5 text-gray-300 bg-gray-600 border-none rounded-lg"
+              placeholder="Enter here"
+            />
+          </div>
+          <!-- rating field -->
+          <!-- <div class="input_field">
+            <label class="rating mb-4 mr-6 ml-4">Rating</label>
+
+            <select
+              id="rating"
+              name="rating"
+              class="w-2/3 mt-1 mb-5 bg-gray-700 py-2 px-2 rounded-lg"
+            >
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option selected>5</option>
+            </select>
+          </div> -->
+
+          <!-- message box -->
+          <div class="input_field mr-12 ml-4">
+            <label for="message" class="text-white mb-4 justify-center"
+              >Message</label
+            >
+            <br />
+            <textarea
+              placeholder="Write here tasks done in mentioned timeframe"
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full border mt-1 bg-gray-700 py-10 px-12 rounded-lg"
+            ></textarea>
+          </div>
+
+          <input type="hidden" id="unique_id" name="unique_id" />
+          <div class="input_field flex justify-center gap-3 mb-7">
+            <button
+              type="submit"
+              class="bg-blue-600 hover:bg-blue-500 px-3 py-2 rounded"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              id="clear_button"
+              class="bg-yellow-600 hover:bg-yellow-500 px-3 py-2 rounded"
+            >
+              Clear
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="w-full h-full overflow-auto">
+        <!-- feedbacks -->
+
+        <div class="feedback_container p-4">
+          <h1 id="task-title" class="text-3xl font-bold text-center my-2">
+            Hourly Task of
+          </h1>
+
+          <div
+            id="feedback_item_container"
+            class="p-4 bg-gray-700 rounded-lg"
+          ></div>
+        </div>
+      </div>
+    </main>
+    <script src="js/feedback.js">
+      // Function to set today's date by default
+    </script>
+  </body>
+</html>
