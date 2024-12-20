@@ -124,6 +124,18 @@ loadFeedbacks();
     return "ID-" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
   }
 
+let uniqueID = localStorage.getItem("unique_id");
+    if (!uniqueID) {
+        // Generate a new unique ID and save it to local storage
+        uniqueID = generateUniqueID();
+        localStorage.setItem("unique_id", uniqueID);
+    }
+
+    // Populate the hidden field with the unique ID
+    const uniqueIdField = document.getElementById("unique_id");
+    uniqueIdField.value = uniqueID;
+
+
       // Set the unique ID in the hidden input field
 // 
 feedback_form.addEventListener("submit",(event)=>{
@@ -134,7 +146,7 @@ feedback_form.addEventListener("submit",(event)=>{
   const t1 =  document.getElementById("t1").value;
   const time2 = document.getElementById("time2").value;
   const message = document.getElementById("message").value;
-  document.getElementById("unique_id").value = generateUniqueID();
+  
   const uniqueID = document.getElementById("unique_id").value;
     
     console.log(name);
