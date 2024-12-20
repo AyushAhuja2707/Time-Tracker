@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+
 console.log("Feedback");
 
 //  html form ko access karna hai
@@ -198,4 +198,3 @@ function updateFeedback(uniqueID){
   loadFeedbacks(); // Make it visually disabled
 }
 
-});
