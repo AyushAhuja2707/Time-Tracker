@@ -16,6 +16,9 @@
           action=""
           class="bg-gray-700 rounded-lg flex flex-col w-full lg:w-2/3"
         >
+          <marquee behavior="scroll" direction="left">
+            Task will get deleted at 12 midnight everyday .
+          </marquee>
           <div class="image_container flex justify-center mt-5">
             <img
               class="w-20 justify-center"
@@ -42,6 +45,8 @@
               name="name"
               class="w-2/3 px-2 py-2 mt-1 mb-5 text-gray-300 bg-gray-600 border-none rounded-lg"
               placeholder="Study/Play/Tp..."
+              autocomplete="off"
+              required
             />
           </div>
           <!-- email field -->
@@ -55,6 +60,7 @@
               name="t1"
               class="w-2/3 px-2 py-2 mt-1 mb-5 text-gray-300 bg-gray-600 border-none rounded-lg"
               step="300"
+              required
             />
           </div>
 
@@ -66,6 +72,7 @@
               name="time2"
               class="w-2/3 px-2 py-2 mt-1 mb-5 text-gray-300 bg-gray-600 border-none rounded-lg"
               placeholder="Enter here"
+              required
             />
           </div>
           <!-- rating field -->
@@ -133,6 +140,7 @@
         </div>
       </div>
     </main>
+
     <script src="js/feedback.js">
       // Function to set today's date by default
     </script>
