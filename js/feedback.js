@@ -24,13 +24,7 @@ const formattedDate = `${year}-${month}-${day}`;
     // Update the heading with today's date
 document.getElementById("task-title").textContent = `Hourly Task of ${formattedDate}`;
 
-  function generateUniqueID() {
-        // You can use current time + a random number to ensure uniqueness
-    return "ID-" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
-  }
 
-      // Set the unique ID in the hidden input field
-document.getElementById("unique_id").value = generateUniqueID();
     // time checl
 const fromTimeInput = document.getElementById('t1');
 const toTimeInput = document.getElementById('time2');
@@ -124,6 +118,14 @@ let completedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
 
 
 loadFeedbacks();
+
+  function generateUniqueID() {
+        // You can use current time + a random number to ensure uniqueness
+    return "ID-" + new Date().getTime() + "-" + Math.floor(Math.random() * 1000);
+  }
+
+      // Set the unique ID in the hidden input field
+// 
 feedback_form.addEventListener("submit",(event)=>{
     event.preventDefault();
     // console.log(feedback_form);
@@ -132,6 +134,7 @@ feedback_form.addEventListener("submit",(event)=>{
   const t1 =  document.getElementById("t1").value;
   const time2 = document.getElementById("time2").value;
   const message = document.getElementById("message").value;
+  document.getElementById("unique_id").value = generateUniqueID();
   const uniqueID = document.getElementById("unique_id").value;
     
     console.log(name);
