@@ -1,3 +1,5 @@
+
+document.addEventListener("DOMContentLoaded", () => {
 console.log("Feedback");
 
 //  html form ko access karna hai
@@ -207,3 +209,5 @@ function updateFeedback(uniqueID){
   localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
   loadFeedbacks(); // Make it visually disabled
 }
+
+});
